@@ -1,0 +1,2 @@
+# make all files in directory plots only binary storage
+plots/* binary

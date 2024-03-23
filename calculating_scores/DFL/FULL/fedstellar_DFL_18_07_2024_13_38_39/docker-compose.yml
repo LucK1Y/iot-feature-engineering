@@ -1,0 +1,463 @@
+
+services:
+
+    participant0:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_0.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.17
+            fedstellar-net-base:
+
+    participant1:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_1.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.2
+            fedstellar-net-base:
+
+    participant2:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_2.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.3
+            fedstellar-net-base:
+
+    participant3:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_3.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.4
+            fedstellar-net-base:
+
+    participant4:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_4.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.5
+            fedstellar-net-base:
+
+    participant5:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_5.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.6
+            fedstellar-net-base:
+
+    participant6:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_6.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.7
+            fedstellar-net-base:
+
+    participant7:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_7.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.8
+            fedstellar-net-base:
+
+    participant8:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_8.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.9
+            fedstellar-net-base:
+
+    participant9:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_9.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.10
+            fedstellar-net-base:
+
+    participant10:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_10.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.11
+            fedstellar-net-base:
+
+    participant11:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_11.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.12
+            fedstellar-net-base:
+
+    participant12:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_12.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.13
+            fedstellar-net-base:
+
+    participant13:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_13.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.14
+            fedstellar-net-base:
+
+    participant14:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_14.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.15
+            fedstellar-net-base:
+
+    participant15:
+        image: fedstellar-gpu
+        environment:
+            - NVIDIA_DISABLE_REQUIRE=true
+        restart: no
+        volumes:
+            - /home/ubuntu/fedstellar-development-main:/fedstellar
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ipc: host
+        privileged: true
+        command:
+            - /bin/bash
+            - -c
+            - |
+                ifconfig && echo '192.168.50.1 host.docker.internal' >> /etc/hosts && python3.11 /fedstellar/fedstellar/node_start.py /fedstellar/app/config/fedstellar_DFL_18_07_2024_13_38_39/participant_15.json
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+        networks:
+            fedstellar-net-scenario:
+                ipv4_address: 192.168.50.16
+            fedstellar-net-base:
+
+
+networks:
+    fedstellar-net-scenario:
+        name: fedstellar-net-scenario
+        driver: bridge
+        ipam:
+            config:
+                - subnet: 192.168.50.0/24
+                  gateway: 192.168.50.1     
+    fedstellar-net-base:
+        name: fedstellar-net-base
+        external: true

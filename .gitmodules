@@ -1,0 +1,3 @@
+[submodule "fedstellar"]
+	path = fedstellar
+	url = https://github.com/enriquetomasmb/fedstellar.git
